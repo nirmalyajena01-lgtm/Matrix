@@ -13,5 +13,5 @@ export default function ReportingWidget(){
   <div className="mt-3 grid sm:grid-cols-2 gap-2"><label className="rounded-xl border border-slate-200 p-3 flex gap-2 items-center text-xs font-bold cursor-pointer"><Paperclip size={15}/> {file?file.name:"Add photo / video"}<input type="file" accept="image/*,video/*" className="hidden" onChange={e=>setFile(e.target.files?.[0]??null)}/></label><button onClick={()=>setLoc(!loc)} className={`rounded-xl border p-3 flex gap-2 items-center text-xs font-bold ${loc?'border-blue-300 bg-blue-50 text-blue-700':'border-slate-200'}`}><MapPin size={15}/> {loc?'Location attached':'Attach location'}</button></div>
   <label className="mt-4 flex items-center gap-3 rounded-xl bg-slate-50 p-3 text-xs"><input type="checkbox" checked={anon} onChange={e=>setAnon(e.target.checked)}/><span><b>Anonymous report</b><br/><span className="text-slate-500">Identity is not stored with incident data.</span></span></label>
   <button disabled={loading} onClick={submit} className="mt-5 w-full rounded-xl bg-slate-950 text-white py-3 font-black flex items-center justify-center gap-2 disabled:opacity-50">{loading?'Prioritizing…':<>Submit emergency <Send size={16}/></>}</button>
- </div>
+ </motion.div>
 }

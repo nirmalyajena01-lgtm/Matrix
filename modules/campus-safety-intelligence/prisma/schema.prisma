@@ -1,1 +1,19 @@
-generator client{provider="prisma-client-js"}datasource db{provider="sqlite" url=env("DATABASE_URL")}model SafetyEvent{id String @id;incidentId String;category String;severity String;status String;building String;responseMinutes Float;createdAt DateTime @default(now())}
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "sqlite"
+	url      = env("DATABASE_URL")
+}
+
+model SafetyEvent {
+	id              String   @id
+	incidentId      String
+	category        String
+	severity        String
+	status          String
+	building        String
+	responseMinutes Float
+	createdAt       DateTime @default(now())
+}

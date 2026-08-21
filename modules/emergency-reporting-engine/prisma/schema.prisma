@@ -1,16 +1,18 @@
-generator client { provider = "prisma-client-js" }
-datasource db { provider = "sqlite" url = env("DATABASE_URL") }
+generator client {
+  provider = "prisma-client-js"
+}
 
-enum Category { MEDICAL FIRE HARASSMENT UNSAFE_LOCATION INFRASTRUCTURE_FAILURE ACCIDENT OTHER }
-enum Severity { CRITICAL HIGH MEDIUM LOW }
-enum IncidentStatus { REPORTED VERIFIED ASSIGNED RESPONDING RESOLVED }
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
 
 model Incident {
   id            String @id
-  category      Category
+  category      String
   description   String
-  severity      Severity
-  status        IncidentStatus @default(REPORTED)
+  severity      String
+  status        String @default("REPORTED")
   anonymous     Boolean @default(false)
   reporterName  String?
   latitude      Float?

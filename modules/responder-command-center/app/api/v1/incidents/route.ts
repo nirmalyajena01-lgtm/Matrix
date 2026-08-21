@@ -1,0 +1,3 @@
+import {NextRequest,NextResponse} from 'next/server';import {prisma} from '@/lib/prisma';
+export async function GET(){return NextResponse.json({data:await prisma.incident.findMany({orderBy:[{severity:'asc'},{createdAt:'desc'}]})})}
+export async function POST(req:NextRequest){const b=await req.json();const i=await prisma.incident.upsert({where:{id:b.id},update:{description:b.description,status:b.status},create:{id:b.id,category:b.category,description:b.description,severity:b.severity,status:b.status??'REPORTED',latitude:b.latitude??20.3524,longitude:b.longitude??85.8185,building:b.building??'Unknown',reporter:b.anonymous?'Anonymous':b.reporterName}});return NextResponse.json({data:i},{status:201})}

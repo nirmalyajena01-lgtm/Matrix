@@ -1,0 +1,11 @@
+{
+  "product": "Campus Safety Intelligence",
+  "buyer": "University management",
+  "suggestedAskingPrice": "\u20b92\u20133 Cr",
+  "independentlyDeployable": true,
+  "apiBase": "/api/v1/events",
+  "integrationTarget": "<30 minutes",
+  "team": "MATRIX",
+  "hackathon": "HACQUIRE 2026",
+  "problemStatement": "PS-01"
+}

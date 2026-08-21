@@ -1,0 +1,11 @@
+{
+  "product": "Emergency Reporting Engine",
+  "buyer": "Campus apps",
+  "suggestedAskingPrice": "\u20b91.5\u20132 Cr",
+  "independentlyDeployable": true,
+  "apiBase": "/api/v1/incidents",
+  "integrationTarget": "<30 minutes",
+  "team": "MATRIX",
+  "hackathon": "HACQUIRE 2026",
+  "problemStatement": "PS-01"
+}

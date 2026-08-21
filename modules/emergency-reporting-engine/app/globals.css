@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--red:#dc2626;--navy:#0b1220}
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+button,input,textarea,select{font:inherit}.glass{background:rgba(255,255,255,.86);backdrop-filter:blur(16px)}

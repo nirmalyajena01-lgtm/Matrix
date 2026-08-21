@@ -1,0 +1,7 @@
+generator client {provider="prisma-client-js"}
+datasource db {provider="sqlite" url=env("DATABASE_URL")}
+enum Severity {CRITICAL HIGH MEDIUM LOW}
+enum Status {REPORTED VERIFIED ASSIGNED RESPONDING RESOLVED}
+model Incident {id String @id;category String;description String;severity Severity;status Status @default(REPORTED);latitude Float;longitude Float;building String;reporter String?;responderId String?;responderName String?;etaSeconds Int?;createdAt DateTime @default(now());updatedAt DateTime @updatedAt}
+model Responder {id String @id;name String;team String;lat Float;lng Float;available Boolean @default(true);skills String}
+model Alert {id String @id;title String;message String;zone String;audience String;createdAt DateTime @default(now())}

@@ -1,0 +1,1 @@
+export const sla=(s:string)=>s==='CRITICAL'?300:s==='HIGH'?600:s==='MEDIUM'?1800:3600;
